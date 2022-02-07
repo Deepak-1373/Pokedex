@@ -7,6 +7,7 @@ function pokedex() {
       <div className="pokedex-search-bar">
         <p>search Bar</p>
       </div>
+
       <div className="pokedex-list-container">
         <p>Pokemon list</p>
       </div>
