@@ -1,5 +1,4 @@
 import React from "react";
-import Searchbar from "../searchbar/searchbar";
 import "./pokedex.css";
 
 function pokedex() {
