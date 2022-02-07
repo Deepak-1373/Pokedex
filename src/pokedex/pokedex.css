@@ -1,0 +1,17 @@
+.pokedex-container {
+  width: 80vw;
+  height: 80vh;
+  margin: auto;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--red);
+}
+
+.pokedex-search-bar {
+  position: absolute;
+  top: 0;
+  margin-top: 2.5rem;
+}
