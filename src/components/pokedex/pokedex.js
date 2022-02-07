@@ -1,4 +1,5 @@
 import React from "react";
+import SearchBar from "../searchbar/searchbar";
 import "./pokedex.css";
 
 function pokedex() {
@@ -8,7 +9,7 @@ function pokedex() {
         <p>List of Pokemons</p>
       </div>
       <div className="pokemon-search-result-container">
-        <p>Pokemon Search Results</p>
+        <SearchBar />
       </div>
     </div>
   );
