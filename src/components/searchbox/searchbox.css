@@ -3,6 +3,7 @@
   border: none;
   margin: 1.5rem;
   padding: 1.5rem;
+  outline: none;
   font-family: "Press Start 2P", cursive;
   border: 1px solid var(--border-color);
 }
