@@ -1,11 +1,11 @@
 import React from "react";
-import "./searchbar.css";
+import "./result.css";
 
-function searchbar() {
+const result = () => {
   const selectedPokemon = true;
 
   return (
-    <div className="searchbar-container">
+    <div className="searchbar-result-container">
       {selectedPokemon ? (
         <div>
           {/* add image here */}
@@ -20,6 +20,6 @@ function searchbar() {
       )}
     </div>
   );
-}
+};
 
-export default searchbar;
+export default result;

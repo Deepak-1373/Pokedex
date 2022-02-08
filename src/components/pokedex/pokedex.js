@@ -1,18 +1,18 @@
 import React from "react";
-import SearchBar from "../searchbar/searchbar";
 import "./pokedex.css";
+import Result from "../result/result";
 
-function pokedex() {
+const pokedex = () => {
   return (
     <div className="pokedex-container">
       <div className="pokelist-container">
         <p>List of Pokemons</p>
       </div>
       <div className="pokemon-search-result-container">
-        <SearchBar />
+        <Result />
       </div>
     </div>
   );
-}
+};
 
 export default pokedex;
