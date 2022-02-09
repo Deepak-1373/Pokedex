@@ -4,29 +4,19 @@ import Pokedex from "./components/pokedex/pokedex";
 import { pokemonData } from "./data/pokemonData";
 
 const App = () => {
-  const [appState, setState] = useState([
-    {
-      searchField: "",
-      allPokemons: [],
-      searchedPokemons: [],
-      selectedPokemon: undefined,
-    },
-  ]);
-
-  const [play, setPlay] = useState([
-    {
-      name: "Madhav",
-    },
-  ]);
+  const [searchField, setSearchField] = useState("");
+  const [allPokemons, setAllPokemons] = useState([]);
+  const [searchedPokemons, setSearchedPokemons] = useState([]);
+  const [selectedPokemon, setSelectedPokemon] = useState(undefined);
 
   useEffect(() => {
     const pokeData = pokemonData;
-    console.log(pokeData);
+    setAllPokemons(pokeData);
   }, []);
   return (
     <div className="app">
       <h1>Pokedex</h1>
-      <Pokedex />
+      <Pokedex allPokemons={allPokemons} />
     </div>
   );
 };

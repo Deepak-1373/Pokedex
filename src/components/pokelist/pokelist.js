@@ -2,14 +2,15 @@ import React from "react";
 import Pokecard from "../pokecard/pokecard";
 import "./pokelist.css";
 
-const pokelist = () => {
+const pokelist = ({ allPokemons }) => {
+  // console.log(allPokemons);
   return (
     <div className="pokelist">
-      <Pokecard name="Pikachu" />
-      <Pokecard name="Bulbsaur" />
+      <Pokecard allPokemons={allPokemons} />
+      {/* <Pokecard name="Bulbsaur" />
       <Pokecard name="Bikachu" />
       <Pokecard name="Pikachu" />
-      <Pokecard name="Bikachu" />
+      <Pokecard name="Bikachu" /> */}
     </div>
   );
 };

@@ -1,12 +1,17 @@
 import React from "react";
 import "./pokecard.css";
 
-const pokecard = ({ name }) => {
+const pokecard = ({ allPokemons }) => {
+  console.log(allPokemons);
   return (
-    <div className="pokecard">
-      {/* Add image here */}
-      {name}
-    </div>
+    <>
+      {allPokemons.map((pokemon) => (
+        <div className="pokecard">
+          <p>{pokemon.name}</p>
+          <p>{pokemon.base_experience}</p>
+        </div>
+      ))}
+    </>
   );
 };
 
