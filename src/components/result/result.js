@@ -2,7 +2,7 @@ import React from "react";
 import "./result.css";
 
 const result = () => {
-  const selectedPokemon = true;
+  const selectedPokemon = false;
 
   return (
     <div className="searchbar-result-container">

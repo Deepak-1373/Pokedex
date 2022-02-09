@@ -1,15 +1,15 @@
 import React from "react";
+import Pokecard from "../pokecard/pokecard";
 import "./pokelist.css";
 
 const pokelist = () => {
   return (
     <div className="pokelist">
-      <p>Pokemon 1</p>
-      <p>Pokemon 2</p>
-      <p>Pokemon 3</p>
-      <p>Pokemon 4</p>
-      <p>Pokemon 5</p>
-      <p>Pokemon 6</p>
+      <Pokecard name="Pikachu" />
+      <Pokecard name="Bulbsaur" />
+      <Pokecard name="Bikachu" />
+      <Pokecard name="Pikachu" />
+      <Pokecard name="Bikachu" />
     </div>
   );
 };
