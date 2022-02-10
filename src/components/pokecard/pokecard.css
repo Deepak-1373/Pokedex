@@ -18,3 +18,8 @@
 .pokecard:hover {
   transform: scale(1.05);
 }
+
+.pokecard-sprite {
+  height: 85px;
+  width: 85px;
+}
