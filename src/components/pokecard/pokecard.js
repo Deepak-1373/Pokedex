@@ -2,13 +2,16 @@ import React from "react";
 import "./pokecard.css";
 
 const pokecard = ({ allPokemons }) => {
-  console.log(allPokemons);
+  // console.log(allPokemons);
+  // console.log(allPokemons[0].sprites["normal"]);
   return (
     <>
-      {allPokemons.map((pokemon) => (
-        <div className="pokecard">
-          <p>{pokemon.name}</p>
-          <p>{pokemon.base_experience}</p>
+      {allPokemons.map(({ id, name, base_experience, sprites }) => (
+        <div className="pokecard" key={id}>
+          {/* <p>{sprites}</p> */}
+          {/* <img src={JSON.parse(sprites.normal)}></img> */}
+          <p>{name}</p>
+          <p>{base_experience}</p>
         </div>
       ))}
     </>

@@ -11,6 +11,7 @@ const App = () => {
 
   useEffect(() => {
     const pokeData = pokemonData;
+    console.log({ ...JSON.parse(pokemonData[0].sprites) });
     setAllPokemons(pokeData);
   }, []);
   return (
