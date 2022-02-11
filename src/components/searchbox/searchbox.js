@@ -5,7 +5,7 @@ const searchbox = ({ handleChange }) => {
   return (
     <div>
       <input
-        onChange={(e) => handleChange(e.target.value)}
+        onChange={(e) => handleChange(e)}
         className="searchbox"
         type="search"
         placeholder="Search Pokemons"
