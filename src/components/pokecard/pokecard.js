@@ -1,8 +1,7 @@
 import React from "react";
 import "./pokecard.css";
 
-const pokecard = ({ key, name, spritesUrl }) => {
-  console.log(spritesUrl);
+const pokecard = ({ name, spritesUrl }) => {
   return (
     <div className="pokecard">
       <img className="pokecard-sprite" alt="pokemon" src={spritesUrl}></img>

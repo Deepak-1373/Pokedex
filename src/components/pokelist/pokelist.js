@@ -6,14 +6,8 @@ const pokelist = ({ allPokemons }) => {
   return (
     <div className="pokelist">
       {allPokemons.map(
-        (pokemon) =>
-          pokemon.name && (
-            <Pokecard
-              key={pokemon.id}
-              name={pokemon.name}
-              spritesUrl={pokemon.sprites.normal}
-            />
-          )
+        ({ id, name, sprites }) =>
+          name && <Pokecard key={id} name={name} spritesUrl={sprites.normal} />
       )}
     </div>
   );

@@ -9,6 +9,16 @@ const App = () => {
   const [searchedPokemons, setSearchedPokemons] = useState([]);
   const [selectedPokemon, setSelectedPokemon] = useState(undefined);
 
+  const handleInputChange = (value) => {
+    setSearchField(value);
+    const result = allPokemons.filter((pokemon) => {
+      return (
+        pokemon.name && pokemon.name.toLowerCase().includes(value.toLowerCase())
+      );
+    });
+    setSearchedPokemons(result);
+  };
+
   useEffect(() => {
     const pokeData = pokemonData;
     setAllPokemons(pokeData);
@@ -16,7 +26,7 @@ const App = () => {
   return (
     <div className="app">
       <h1>Pokedex</h1>
-      <Pokedex allPokemons={allPokemons} />
+      <Pokedex allPokemons={allPokemons} handleChange={handleInputChange} />
     </div>
   );
 };
