@@ -9,12 +9,24 @@ const App = () => {
   const [selectedPokemon, setSelectedPokemon] = useState(undefined);
 
   const handleInputChange = (event) => {
-    let value = event.target.value.toLowerCase();
-    let result = [];
+    const value = event.target.value.toLowerCase();
+    const result = [];
     result = searchedPokemons.filter(({ name }) => {
       return name && name.toLowerCase().includes(value);
     });
     setAllPokemons(result);
+    console.log("handleInputChange", result);
+  };
+
+  const handleClick = (pokemonName) => {
+    // find the selectedPokemon from the searchedPokemon
+    const result = allPokemons.find((pokemon) => {
+      return pokemon.name && pokemon.name === pokemonName;
+    });
+    setSelectedPokemon(result);
+    console.log(result);
+
+    // update the state
   };
 
   useEffect(() => {
@@ -28,6 +40,8 @@ const App = () => {
       <Pokedex
         allPokemons={allPokemons}
         pokemons={searchedPokemons}
+        selectedPokemon={selectedPokemon}
+        handleClick={handleClick}
         handleChange={handleInputChange}
       />
     </div>

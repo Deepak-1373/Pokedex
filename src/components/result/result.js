@@ -1,19 +1,26 @@
 import React from "react";
 import "./result.css";
 
-const result = () => {
-  const selectedPokemon = false;
+const result = ({ selectedPokemon }) => {
+  if (selectedPokemon != undefined) {
+    const { name, id, height, weight, base_experience, sprites } =
+      selectedPokemon;
+  }
 
   return (
     <div className="searchbar-result-container">
-      {selectedPokemon ? (
+      {console.log(selectedPokemon)}
+      {selectedPokemon != undefined ? (
         <div>
-          {/* add image here */}
-          <p>Name: Pickachu</p>
-          <p>Id: Random Id</p>
-          <p>Height: Random</p>
-          <p>Weight: Random</p>
-          <p>Base exp: 100xp</p>
+          <img
+            src={sprites.animated ? sprites.animated : sprites.normal}
+            className="result-image"
+          ></img>
+          <p>Name: {name}</p>
+          <p>Id: {id}</p>
+          <p>Height: {height}</p>
+          <p>Weight: {weight}</p>
+          <p>Base exp: {base_experience}</p>
         </div>
       ) : (
         <h2>Welcome to Pokedex</h2>

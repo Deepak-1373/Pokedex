@@ -4,15 +4,20 @@ import Result from "../result/result";
 import SearchBox from "../searchbox/searchbox";
 import Pokelist from "../pokelist/pokelist";
 
-const pokedex = ({ allPokemons, handleChange }) => {
+const pokedex = ({
+  allPokemons,
+  handleChange,
+  selectedPokemon,
+  handleClick,
+}) => {
   return (
     <div className="pokedex-container">
       <div className="pokelist-container">
         <SearchBox handleChange={handleChange} />
-        <Pokelist allPokemons={allPokemons} />
+        <Pokelist handleClick={handleClick} allPokemons={allPokemons} />
       </div>
       <div className="pokemon-search-result-container">
-        <Result />
+        <Result selectedPokemon={selectedPokemon} />
       </div>
     </div>
   );
