@@ -37,7 +37,6 @@ const App = () => {
       <h1>Pokedex</h1>
       <Pokedex
         allPokemons={allPokemons}
-        pokemons={searchedPokemons}
         selectedPokemon={selectedPokemon}
         handleClick={handleClick}
         handleChange={handleInputChange}
