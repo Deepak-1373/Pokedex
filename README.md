@@ -1,3 +1,5 @@
+# Preview <a href="https://62075e9d8725bc000877bc24--deepak-1373-pokedex.netlify.app/">(Link)</a>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
