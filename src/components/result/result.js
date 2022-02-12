@@ -10,6 +10,7 @@ const result = ({ selectedPokemon }) => {
       {Object.keys(selectedPokemon).length > 0 ? (
         <div>
           <img
+            alt={name}
             src={sprites?.animated || sprites?.normal}
             className="result-image"
           />
