@@ -6,27 +6,25 @@ import { pokemonData } from "./data/pokemonData";
 const App = () => {
   const [searchedPokemons, setSearchedPokemons] = useState([]);
   const [allPokemons, setAllPokemons] = useState(searchedPokemons);
-  const [selectedPokemon, setSelectedPokemon] = useState(undefined);
+  const [selectedPokemon, setSelectedPokemon] = useState({});
 
   const handleInputChange = (event) => {
-    const value = event.target.value.toLowerCase();
-    const result = [];
+    let value = event.target.value.toLowerCase();
+    let result = [];
     result = searchedPokemons.filter(({ name }) => {
       return name && name.toLowerCase().includes(value);
     });
     setAllPokemons(result);
-    console.log("handleInputChange", result);
   };
 
   const handleClick = (pokemonName) => {
     // find the selectedPokemon from the searchedPokemon
-    const result = allPokemons.find((pokemon) => {
-      return pokemon.name && pokemon.name === pokemonName;
+    const result = allPokemons.find(({ name }) => {
+      return name === pokemonName;
     });
-    setSelectedPokemon(result);
-    console.log(result);
 
     // update the state
+    setSelectedPokemon(result);
   };
 
   useEffect(() => {

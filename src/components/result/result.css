@@ -11,3 +11,9 @@
   background-color: var(--yellow);
   border: 0.1rem solid var(--border-color);
 }
+
+.result-image {
+  width: 12rem;
+  height: 12rem;
+  padding: 1.2rem;
+}
