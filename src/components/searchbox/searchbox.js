@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./searchbox.css";
+import { myContext } from "../../context";
 
-const searchbox = ({ handleChange }) => {
+const Searchbox = () => {
+  const { handleInputChange } = useContext(myContext);
   return (
     <div>
       <input
-        onChange={(e) => handleChange(e)}
+        onChange={(e) => handleInputChange(e)}
         className="searchbox"
         type="search"
         placeholder="Search Pokemons"
@@ -14,4 +16,4 @@ const searchbox = ({ handleChange }) => {
   );
 };
 
-export default searchbox;
+export default Searchbox;

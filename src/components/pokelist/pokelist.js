@@ -1,20 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import Pokecard from "../pokecard/pokecard";
 import "./pokelist.css";
+import { myContext } from "../../context";
 
-const pokelist = ({ allPokemons, handleClick }) => {
+const pokelist = () => {
+  const { allPokemons } = useContext(myContext);
   return (
     <div className="pokelist">
       {allPokemons.map(
         ({ id, name, sprites }) =>
-          name && (
-            <Pokecard
-              handleClick={handleClick}
-              key={id}
-              name={name}
-              spritesUrl={sprites.normal}
-            />
-          )
+          name && <Pokecard key={id} name={name} spritesUrl={sprites.normal} />
       )}
     </div>
   );

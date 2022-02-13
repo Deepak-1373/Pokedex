@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./result.css";
+import { myContext } from "../../context";
 
-const result = ({ selectedPokemon }) => {
+const result = () => {
+  const { selectedPokemon } = useContext(myContext);
   const { name, id, height, weight, base_experience, sprites } =
     selectedPokemon || {};
 
