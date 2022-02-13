@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./result.css";
 import { myContext } from "../../context";
 
-const result = () => {
+const Result = () => {
   const { selectedPokemon } = useContext(myContext);
   const { name, id, height, weight, base_experience, sprites } =
     selectedPokemon || {};
@@ -29,4 +29,4 @@ const result = () => {
   );
 };
 
-export default result;
+export default Result;

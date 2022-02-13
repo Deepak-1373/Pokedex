@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./pokecard.css";
 import { myContext } from "../../context";
 
-const pokecard = ({ name, spritesUrl }) => {
+const Pokecard = ({ name, spritesUrl }) => {
   const { handleClick } = useContext(myContext);
   return (
     <div className="pokecard" onClick={() => handleClick(name)}>
@@ -12,4 +12,4 @@ const pokecard = ({ name, spritesUrl }) => {
   );
 };
 
-export default pokecard;
+export default Pokecard;

@@ -3,7 +3,7 @@ import Pokecard from "../pokecard/pokecard";
 import "./pokelist.css";
 import { myContext } from "../../context";
 
-const pokelist = () => {
+const Pokelist = () => {
   const { allPokemons } = useContext(myContext);
   return (
     <div className="pokelist">
@@ -15,4 +15,4 @@ const pokelist = () => {
   );
 };
 
-export default pokelist;
+export default Pokelist;

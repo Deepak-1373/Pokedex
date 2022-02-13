@@ -4,7 +4,7 @@ import Result from "../result/result";
 import SearchBox from "../searchbox/searchbox";
 import Pokelist from "../pokelist/pokelist";
 
-const pokedex = () => {
+const Pokedex = () => {
   return (
     <div className="pokedex-container">
       <div className="pokelist-container">
@@ -18,4 +18,4 @@ const pokedex = () => {
   );
 };
 
-export default pokedex;
+export default Pokedex;
