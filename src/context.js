@@ -1,39 +1,7 @@
 import { createContext, useEffect, useReducer } from "react";
 import { pokemonData } from "./data/pokemonData";
+import { reducer, initialState } from "./reducer";
 
-const initialState = {
-  searchedPokemons: [],
-  allPokemons: [],
-  selectedPokemon: {},
-};
-
-initialState.allPokemons = initialState.searchedPokemons;
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "SEARCHED_POKEMONS":
-      return {
-        ...state,
-        searchedPokemons: action.payload,
-        allPokemons: action.payload,
-      };
-
-    case "INPUT_CHANGE":
-      return {
-        ...state,
-        allPokemons: action.payload,
-      };
-
-    case "ON_CLICK":
-      return {
-        ...state,
-        selectedPokemon: action.payload,
-      };
-
-    default:
-      return state;
-  }
-};
 export const myContext = createContext();
 
 const MyContextProvider = ({ children }) => {
