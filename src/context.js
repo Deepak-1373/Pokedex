@@ -3,16 +3,18 @@ import { pokemonData } from "./data/pokemonData";
 
 const initialState = {
   searchedPokemons: [],
-  allPokemons: searchedPokemons,
+  allPokemons: [],
   selectedPokemon: {},
 };
+
+initialState.allPokemons = initialState.searchedPokemons;
 
 const reducer = (state, action) => {
   switch (action.type) {
     case "SEARCHED_POKEMONS":
       return {
         ...state,
-        searchedPokemons: [...searchedPokemons, action.payload],
+        searchedPokemons: action.payload,
         allPokemons: action.payload,
       };
 
